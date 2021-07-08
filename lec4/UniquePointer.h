@@ -13,7 +13,7 @@ class UniquePointer
 			}
 	public:
 		UniquePointer() noexcept = default;
-		UniquePointer(T* ptr) noexcept : m_ptr(ptr)
+		explicit UniquePointer(T* ptr) noexcept : m_ptr(ptr)
 			{}
 		~UniquePointer()
 			{
