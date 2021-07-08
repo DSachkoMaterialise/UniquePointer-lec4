@@ -1,5 +1,6 @@
 #pragma once
 #include <cstddef>
+#include <algorithm>
 
 template <class T>
 class UniquePointer
@@ -83,6 +84,10 @@ class UniquePointer
 		operator bool() const noexcept
 			{
 			return m_ptr;
+			}
+		void swap(UniquePointer& pointer)
+			{
+			std::swap(m_ptr, pointer.m_ptr);
 			}
 	};
 
